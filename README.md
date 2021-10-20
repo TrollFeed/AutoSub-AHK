@@ -63,7 +63,7 @@ else if (Language = "ko-KR") {
    即不严格按照最短字幕长度，程序会自己做一些权衡，这样断句效果更合理  
    更多参数问题：[Auditok文档（纯英文）](https://auditok.readthedocs.io/en/master/command_line_usage.html)  
   
-11. 版本自带的AutoSub是目前最新的0.5.7-Alpha版，如果冰灵字幕组推出更新版，自行替换AutoSub子目录进行升级（如果命令行调用方式没有变的话）  
+11. 版本自带的AutoSub是目前最新的0.3.7-Alpha版，如果冰灵字幕组推出更新版，自行替换AutoSub子目录进行升级（如果命令行调用方式没有变的话）  
 
 ### 其他说明
 * 有问题或建议请建[Issue](https://github.com/TrollFeed/autosub-ahk/issues)
