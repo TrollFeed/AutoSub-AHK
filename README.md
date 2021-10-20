@@ -23,7 +23,7 @@ AutoSub-AHK版本v1.0.8由台湾开发者[簡睿]创作，版权归其所有
 
 ### 使用说明
 
-1. 整包解压后点击"autosub-ahk v1.1.8.exe"即可运行  
+1. 点击Code按钮，下载为zip，本地解压后点击"autosub-ahk v1.1.8.exe"即可运行  
    如果想要自己hack加入更多功能，请在Windows环境下安装AutoHotkey，对"autosub-ahk源码.ahk" 右键 - 选择"编辑脚本"  
   
 2. 支持拖曳添加多个视频文件  
@@ -32,7 +32,7 @@ AutoSub-AHK版本v1.0.8由台湾开发者[簡睿]创作，版权归其所有
   
 4. 输出文件名会自动加入所选的语言代码  
   
-5. 这个软件只是是一个GUI的皮，原理是根据用户输入的参数生成一行AutoSub指令，透过 gen.bat 或 gen-txt.bat 调用AutoSub来执行语音处理：  
+5. 这个软件只是是一个GUI的皮，原理是根据用户输入的各项参数生成一行AutoSub指令，透过 gen.bat 或 gen-txt.bat 调用AutoSub来执行语音处理：  
     * gen.bat: 用于生成srt字幕  
     * gen-txt.bat: 用于生成纯文本  
   
