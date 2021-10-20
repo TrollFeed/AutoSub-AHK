@@ -7,7 +7,7 @@ AutoSub的GUI版
 AutoSub是一款命令行字幕转录工具，目前由[冰灵字幕组](https://github.com/BingLingGroup/AutoSub)开发维护。  
 本项目名为AutoSub-AHK，是为了帮助不会用命令行的小伙伴使用AutoSub，用AutoHotkey写的一个图形界面。  
 
-AutoSub-AHK版本v1.0.8由台湾开发者[簡睿]创作，版权归其所有
+AutoSub-AHK版本v1.0.8由台湾开发者[簡睿](https://github.com/emisjerry/autosub-ahk)创作，版权归其所有
 > Author: Jerry Jian
 >  * YouTube: https://www.youtube.com/channel/UC2xBvmv-lhsY4suxv46lplg
 >  * Blog: http://jdev.tw/blog
@@ -47,14 +47,15 @@ AutoSub-AHK版本v1.0.8由台湾开发者[簡睿]创作，版权归其所有
    business下方的language值会根据你在GUI中的选择而变化，无需手动输入  
    accent不论语言是什么都需要填mandarin，这个是讯飞文档里记载的，估计以后他们支持其他语种的方言了会改掉的。
 
-9. 目前我给讯飞接口仅添加了 zh_cn，ja_jp 和 en_us 三种语言，如果需要其他小语种请自行添加下面的片段到源码第257行下方
-比如添加 "ko-KR 韩语" 就这样写，这个片段的作用就是把谷歌的语言代码替换为讯飞的，具体代码参见文档:
+9. 目前我给讯飞接口仅添加了 zh_cn，ja_jp 和 en_us 三种语言，如果需要其他小语种请自行添加以下代码片段到源码第257行下面  
+比如添加 "ko-KR 韩语" 可以这样写↓  
 
 ```
 else if (Language = "ko-KR") {
         xfkey := RegExReplace(JSONtext, "mU)language"":\s"".*""`," , "language"": ""ko_kr"",")
       }
-```
+```  
+这个片段的作用就是用正则表达式把谷歌的语言代码 ko-KR 替换为讯飞的ko_kr，不同语种的代码是什么请[参见文档](https://www.xfyun.cn/doc/asr/voicedictation/Android-SDK.html#_2-2-5%E3%80%81%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E)
   
 10. GUI界面支持修改的Auditok参数分别是  
     MAX_SUB :       -mxrs = "最长字幕（秒，默认10）"  
