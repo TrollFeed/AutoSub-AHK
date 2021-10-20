@@ -43,9 +43,13 @@ AutoSub-AHK版本v1.0.8由台湾开发者[簡睿]创作，版权归其所有
   
 8. 讯飞云接口需要自行配置"xfyun_key.json"，详情请参见[配置文档说明]( https://github.com/BingLingGroup/autosub/blob/dev/docs/README.zh-Hans.md#%E8%AE%AF%E9%A3%9E%E4%BA%91%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB%E9%85%8D%E7%BD%AE)  
    具体操作就是你去讯飞云的网站申请[语言听写（流式）](https://console.xfyun.cn/services/iat)服务（实名认证后可以白嫖10万次交互额度，够大概20小时的转录量），建立一个自己的app应用，然后把APPID、APISecret和APIKey参数填入到"xfyun_key.json"当中  
+   需注意  
+   business下方的language值会根据你在GUI中的选择而变化，无需手动输入  
+   accent不论语言是什么都需要填mandarin，这个是讯飞文档里记载的，估计以后他们支持其他语种的方言了会改掉的。
 
-9. 目前的讯飞接口仅支持 zh_cn，ja_jp 和 en_us 三种语言，如果需要其他小语种请自行添加下面的片段到源码第257行
-比如添加韩语
+9. 目前我给讯飞接口仅添加了 zh_cn，ja_jp 和 en_us 三种语言，如果需要其他小语种请自行添加下面的片段到源码第257行下方
+比如添加 "ko-KR 韩语" 就这样写，这个片段的作用就是把谷歌的语言代码替换为讯飞的，具体代码参见文档:
+
 ```
 else if (Language = "ko-KR") {
         xfkey := RegExReplace(JSONtext, "mU)language"":\s"".*""`," , "language"": ""ko_kr"",")
