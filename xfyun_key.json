@@ -1,0 +1,10 @@
+{
+    "app_id": "替换为APPID",
+    "api_secret": "替换为APISecret",
+    "api_key": "替换为APIKey",
+    "business": {
+        "language": "zh_cn",
+        "domain": "iat",
+        "accent": "mandarin"
+    }
+}

@@ -1,13 +1,12 @@
 @echo off
 echo *** Loading AutoSub, please wait ...
-set LANG=%1
-set INPUT=%2
-set OUTPUT=%3
-set REAL_OUTPUT=%4
-echo %DATE% %TIME% autosub -S %LANG% -i %INPUT% -o %OUTPUT% > gen.log
+set API=%~1
+set LANG=%~2
+set INPUT=%3
+set OUTPUT=%4
+set REAL_OUTPUT=%5
+set AUDITOK_PARAMS=%~6
+echo %DATE% %TIME% autosub %API% %LANG% -i %INPUT% -o %OUTPUT% %AUDITOK_PARAMS% > gen.log
 rem Append -F txt, if you want a text output
 cd autosub
-autosub -S %LANG% -i %INPUT% -o %OUTPUT% -et 50 -mxrs 6 -mxcs 0.1
-cd ..
-rem Open the output
-%REAL_OUTPUT%
+autosub %API% %LANG% -i %INPUT% -o %OUTPUT% %AUDITOK_PARAMS% -nsml
